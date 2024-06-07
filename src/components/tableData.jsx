@@ -9,6 +9,7 @@ import SearchData from "./search";
 import { useEffect, useState } from "react";
 
 export default function TableData({ getData }) {
+  console.log(getData);
   const [filteredData, setFilteredData] = useState(getData ? getData : []);
 
   useEffect(() => {
@@ -31,12 +32,12 @@ export default function TableData({ getData }) {
   return (
     <>
       <div className="sticky z-0 py-2">
-        // here i have sent mehtod in Search component
+        {/* here i have sent mehtod in Search component */}
         <SearchData onQueryChange={onQueryChange} />
       </div>
-      // here i show all data if user search than he will also see search data
-      in form of table
-      <TableContainer component={Paper}>
+      {/* here i show all data if user search than he will also see search data
+      in form of table */}
+      <TableContainer>
         <Table>
           <TableHead>
             <TableRow className="bg-zinc-200 ">

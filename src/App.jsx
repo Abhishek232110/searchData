@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <div>
-        // i have sent data in table component
+        {/* i have sent data in table component */}
         <TableData getData={getData} />
       </div>
     </>
